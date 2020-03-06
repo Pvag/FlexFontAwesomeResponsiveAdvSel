@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Font-Awesome</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+            integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="icon-container">
+            <!-- <i class="fa fa-camera-retro fa-4x"></i> -->
+            <a href="https://www.instagram.com"
+                ><i class="fab fa-instagram fa-4x"></i
+            ></a>
+            <a href="https://www.twitter.com"
+                ><i class="fab fa-twitter fa-4x"></i
+            ></a>
+            <a href="https://www.youtube.com"
+                ><i class="fab fa-youtube fa-4x"></i
+            ></a>
+            <a href="https://www.facebook.com" target="_blank"
+                ><i class="fab fa-facebook fa-4x"></i
+            ></a>
+        </div>
+
+        <hr class="classy-hr" />
+
+        <div id="selectors-container">
+            <p class="explanation">
+                The first part has been all about Responsive Layout, Flexbox and
+                Font-Awesome.
+            </p>
+            <p class="explanation">
+                Let's now take a deeper look into CSS selectors.
+            </p>
+            <div id="ext-container">
+                <p>
+                    This is a nice external container. This paragraph is set to
+                    red using using this selector:
+                    <code>#ext-container > p</code>.
+                </p>
+                <div>
+                    <p>
+                        This is a list inside an internal container. Notice that
+                        this paragraph is not selected, as opposed to the
+                        previous one, since it is not a direct child of
+                        'final-div'. In fact, its color doesn't turn red!
+                    </p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <p>
+                    ending the external container. This paragraph is set to red
+                    using this selector: <code>#ext-container > p</code>, as
+                    well.
+                </p>
+                <a href="#">go back here</a>
+            </div>
+
+            <div id="final-div">
+                <p>some text</p>
+                <a href="#">go back here</a>
+            </div>
+            <hr class="classy-hr" />
+            <p class="explanation">
+                Please, refer to the .css file for further comments and
+                explanations. You can find it <a href="#">here</a>.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+/* throughout this file, you can try and uncomment lines
+ and see the result of those */
+
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+.icon-container {
+    height: 500px;
+
+    /* - flex properties */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* horizontally space the icons */
+    justify-content: space-evenly;
+    /* also try these other types of justifications: */
+    /*  */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    align-content: center; /* vertically center the icon */
+    /* end of flex properties - */
+
+    background-color: rgb(0, 0, 255);
+    text-align: center;
+    margin: 100px;
+
+    /* properties dealing with the transition */
+    transition-duration: 280ms;
+    transition-property: background-color, transform;
+}
+
+.icon-container:hover {
+    /* transform: rotate(-45deg); */ /* try and uncomment this! */
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+/* #first-icon {
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#first-icon:hover {
+    transform: rotate(-45deg);
+} */
+
+p {
+    color: black;
+}
+
+/* selects any p that is a first child of the element with id 'ext-container' */
+#ext-container > p {
+    color: red;
+}
+
+/* selects any anchor that is a first child of the element with id 'ext-container'
+ and any anchor that is a first child of the element with id 'final-div' */
+/* notice that the comma ',' adds the next selector to the previous selection,
+ thus expanding the first selection */
+#ext-container > a,
+#final-div > a {
+    color: orange;
+}
+
+/* only triggered for screen size <= 500px */
+@media (max-width: 500px) {
+    .icon-container {
+        flex-direction: column;
+    }
+    .icon-container > a {
+        color: lightgreen;
+    }
+    .icon-container > a:hover {
+        color: lime;
+    }
+}
+
+.icon-container > a {
+    color: lightblue;
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+
+/* check out the rotation of the icons, when hovering */
+/* enlarge the window to a wider size, to fully enjoy
+ the effect of the icon rotating on a single row */
+.icon-container > a:nth-of-type(1):hover {
+    transform: rotate(-45deg);
+}
+.icon-container > a:nth-of-type(2):hover {
+    transform: rotate(-20deg);
+}
+.icon-container > a:nth-of-type(3):hover {
+    transform: rotate(20deg);
+}
+.icon-container > a:last-of-type:hover {
+    transform: rotate(45deg);
+}
+
+a:hover {
+    color: white;
+}
+
+/* only triggered for screen size >= 800px */
+@media (min-width: 800px) {
+    .icon-container {
+        /* border: 3px orange dotted; */
+        /* background-color: rgba(255, 255, 255, 0.2); */
+        background-image: url('https://www.india.com/wp-content/uploads/2017/04/Mango-tree.jpg');
+        background-position: center;
+        border-radius: 20px;
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+    }
+    .icon-container:hover {
+        background-color: lightblue;
+    }
+}
+
+a:visited {
+    color: none;
+}
+
+body {
+    line-height: 2em;
+    /* background-color: lightskyblue; */
+    font-family: Spartan, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+code {
+    display: block;
+}
+
+/* horizontal line */
+.classy-hr {
+    width: 40%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: black dotted 0.5px;
+}
+
+#selectors-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.explanation > a:hover {
+    color: red;
+}
+
+.explanation > a:visited {
+    color: black;
+}
